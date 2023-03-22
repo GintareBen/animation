@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: pink;
+  display: flex;
+  margin: 50px;
+}
+
+.heart {
+  position: relative;
+  content: '';
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  transform: rotate(45deg);
+  cursor: pointer;
+  transition-duration: 5s;
+  transition-property: 0.3s ;
+  margin-right: 170px;
+}
+
+.heart::before {
+  content: '';
+  position: absolute;
+  height: 100px;
+  width: 200px;
+  top: -100px;
+  background: red;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  transition-duration: 5s;
+}
+
+.heart::after {
+  content: '';
+  position: absolute;
+  height: 200px;
+  width: 100px;
+  left: -100px;
+  background: red;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  transition-duration: 5s;
+}
+
+.transition .heart:hover {
+  background: white;
+}
+
+.transition .heart:hover:before {
+  background: white;
+}
+
+.transition .heart:hover:after {
+  background: white;
+}
+
+
+.heart2 {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  transform: rotate(45deg);
+  cursor: pointer;
+  animation: heart 1s linear infinite;
+ 
+}
+
+.heart2::before {
+  content: '';
+  position: absolute;
+  height: 100px;
+  width: 200px;
+  top: -100px;
+  background: white;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.heart2::after {
+  content: '';
+  position: absolute;
+  height: 200px;
+  width: 100px;
+  left: -100px;
+  background: white;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+/* Animation */
+
+.animation .heart2 {
+  animation-name: heart2;
+  animation-duration: 3s;
+  animation-direction: infinite;
+  animation-timing-function: linear;
+  cursor: pointer;
+}
+
+@keyframes heart2 {
+  from {
+    transform: rotateZ(0deg)
+  }
+  to {
+    transform: rotateZ(360deg)
+  }
+}
+
+
+
+
+
+
+
+  
+  
+  
